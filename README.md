@@ -7,7 +7,7 @@ Live: https://jotharsh.github.io/Jukeroom/
 ## How it works
 - **No server of ours.** The host's browser is the room. It keeps the queue and the playback state and checks the password. Guests connect straight to it over WebRTC (via [PeerJS](https://peerjs.com)'s free public broker, which only introduces the devices).
 - **Nothing is streamed.** Each device plays the song itself through YouTube's embedded player. The room only shares small messages such as "this video, at this moment".
-- **Sync.** Guests measure the host's clock with ping/pong round trips (best of the quickest samples), work out where the song should be, and seek if they drift more than 0.7 s. The SYNC light shows the measured gap on that device.
+- **Sync.** Guests measure the host's clock with ping/pong round trips (best of the quickest samples), work out where the song should be, and seek if they drift more than 0.3 s. The SYNC light shows the measured gap on that device.
 - **Refresh safe.** The host's room (code, password, queue) is kept in the browser, so a refresh brings the same room back and guests reconnect on their own.
 
 ## Limits (honest)

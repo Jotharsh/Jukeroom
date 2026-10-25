@@ -165,7 +165,8 @@ test('clock sync finds the host offset and ignores a slow outlier', () => {
 test('decide: follows play, pause and large drift, but not small drift or a recent seek', () => {
   const base = { expected: 20, current: 20, wantPlaying: true, playerState: 'playing', sinceSeek: Infinity };
   assert.deepEqual(decide(base), {});
-  assert.deepEqual(decide({ ...base, current: 20.4 }), {});
+  assert.deepEqual(decide({ ...base, current: 20.2 }), {});
+  assert.equal(decide({ ...base, current: 20.45 }).seekTo > 20, true);
   assert.equal(decide({ ...base, current: 25 }).seekTo > 20, true);
   assert.deepEqual(decide({ ...base, current: 25, sinceSeek: 500 }), {});
   assert.deepEqual(decide({ ...base, playerState: 'paused' }), { play: true });

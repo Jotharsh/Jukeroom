@@ -26,7 +26,7 @@ export function expectedPosition(playback, hostNow) {
   return Math.max(0, playback.pos + (hostNow - playback.t) / 1000);
 }
 
-export const DRIFT_SEEK = 0.7;       // seconds out of step before we jump
+export const DRIFT_SEEK = 0.3;       // seconds out of step before we jump
 export const SEEK_COOLDOWN = 2500;   // after a jump, give the player time to settle
 
 /**

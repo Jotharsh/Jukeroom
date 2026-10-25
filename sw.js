@@ -1,6 +1,6 @@
 // Offline support for the app's own files. Rooms need the internet; this makes the app open instantly and survive a bad signal.
 // Change VERSION whenever any file changes, so phones fetch the new files and drop the old cache.
-const VERSION = 'v1';
+const VERSION = 'v2';
 const CACHE = `jukeroom-${VERSION}`;
 
 const SHELL = [

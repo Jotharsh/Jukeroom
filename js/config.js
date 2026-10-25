@@ -1,0 +1,9 @@
+export const APP_NAME = 'Jukeroom';
+export const CODE_ALPHABET = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789';   // no 0/O, 1/I/L, so a code can be read out loud
+export const CODE_LENGTH = 6;
+export const PEER_PREFIX = 'jukeroom-';
+export const MAX_QUEUE = 100;
+export const MAX_MEMBERS = 12;       // a phone hosting a star of direct connections should not be asked for more
+export const MAX_NICK = 24;
+export const MAX_ROOM_NAME = 40;
+export const MAX_PASSWORD_TRIES = 3;
